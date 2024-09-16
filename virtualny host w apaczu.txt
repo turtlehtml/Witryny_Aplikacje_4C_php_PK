@@ -1,0 +1,35 @@
+Dopisujemy na końcu pliku C:\xampp\apache\conf\httpd.conf konfigurację tzw. wirtualnego hosta:
+
+<VirtualHost *> 
+	DocumentRoot "C:/Users/kogutm/Documents/GitHub"
+        Alias /github "C:/Users/kogutm/Documents/GitHub"
+    
+	<Directory "C:/Users/kogutm/Documents/GitHub">
+        Options Indexes FollowSymLinks MultiViews
+        Require all granted
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+
+Restartujemy Apacza. 
+Dzięki wirtualnemu hostowi możemy zobaczyć zawartość katalogu Documents/GitHub w przeglądarce pod adresem http://localhost/github/
+
+
+
+
+
+<VirtualHost *> 
+	DocumentRoot "C:\Users\ct21kozlowskip\Documents\repozytoria"
+        Alias /repo "C:\Users\ct21kozlowskip\Documents\repozytoria"
+    
+	<Directory "C:\Users\ct21kozlowskip\Documents\repozytoria">
+        Options Indexes FollowSymLinks MultiViews
+        Require all granted
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
