@@ -5,3 +5,7 @@ p{
     padding: 15px;
     font-style: italic;
 }
+fieldset{
+    border: 1px solid chocolate;
+    border: 1px solid darkgoldenrod;
+}
