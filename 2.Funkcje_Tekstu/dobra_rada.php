@@ -21,13 +21,20 @@
         //pokazuje pozycje danego słowa lub wartości(liczymy od zera)?>  <br>
         Do stałej DOBRA_RADA stosuje funkcje <strong>str_replace</strong>: <?= str_replace ("chleba","mięsa",DOBRA_RADA);
         //zamienia dane słowo z innym podanym przez nas ?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>strtolower</strong>: <?= strtolower (DOBRA_RADA);?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>strtoupper</strong>: <?= strtoupper (DOBRA_RADA);?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>ucwords</strong>: <?= ucwords (DOBRA_RADA);?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>trim</strong>: <?= trim (DOBRA_RADA);?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>strstr</strong>: <?= strstr (DOBRA_RADA, "nie najesz");?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>substr</strong>: <?= substr (DOBRA_RADA,10,5);?> <br>
-        Do stałej DOBRA_RADA stosuje funkcje <strong>str_pad</strong>: <?= str_pad (DOBRA_RADA,41," -_- ",STR_PAD_BOTH);?><br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>strtolower</strong>: <?= strtolower (DOBRA_RADA);
+        // zamienia wszystkie litery w małe?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>strtoupper</strong>: <?= strtoupper (DOBRA_RADA);
+        // zmienia wszystkie litery na duże?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>ucwords</strong>: <?= ucwords (DOBRA_RADA);
+        // zmienia pierwszą litere w każdym słowie na dużą litere?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>trim</strong>: <?= trim (DOBRA_RADA);
+        // usuwa spacje??? nie wiem XD beka?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>strstr</strong>: <?= strstr (DOBRA_RADA, "nie najesz");
+        // znajduje dane słowo?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>substr</strong>: <?= substr (DOBRA_RADA,10,5);
+        ?> <br>
+        Do stałej DOBRA_RADA stosuje funkcje <strong>str_pad</strong>: <?= str_pad (DOBRA_RADA,41," -_- ",STR_PAD_BOTH);
+        // dodaje słowa w danym miejscu,tutaj na początku i na końcu ?><br>
     </div>
     
     
