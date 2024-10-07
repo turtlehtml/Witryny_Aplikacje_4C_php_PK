@@ -9,3 +9,8 @@ fieldset{
     border: 1px solid chocolate;
     border: 1px solid darkgoldenrod;
 }
+p{
+    border: dashed 2px lightcoral;
+    color: lightcoral;
+    padding: 20px;
+}

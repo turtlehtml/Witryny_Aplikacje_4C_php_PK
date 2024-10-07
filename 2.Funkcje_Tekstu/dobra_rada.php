@@ -28,7 +28,7 @@
         Do stałej DOBRA_RADA stosuje funkcje <strong>ucwords</strong>: <?= ucwords (DOBRA_RADA);
         // zmienia pierwszą litere w każdym słowie na dużą litere?> <br>
         Do stałej DOBRA_RADA stosuje funkcje <strong>trim</strong>: <?= trim (DOBRA_RADA);
-        // usuwa spacje??? nie wiem XD beka?> <br>
+        // usuwa spacje??? nie wiem XD beka usuwa nadmierne spacje,białe cosie ?> <br>
         Do stałej DOBRA_RADA stosuje funkcje <strong>strstr</strong>: <?= strstr (DOBRA_RADA, "nie najesz");
         // znajduje dane słowo?> <br>
         Do stałej DOBRA_RADA stosuje funkcje <strong>substr</strong>: <?= substr (DOBRA_RADA,10,5);
