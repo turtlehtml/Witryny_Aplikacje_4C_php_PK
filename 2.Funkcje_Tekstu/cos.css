@@ -1,16 +1,6 @@
-p{
-    background-color: lightsteelblue;
-    border: 2px dotted blueviolet;
-    border-radius: 5px;
-    padding: 15px;
-    font-style: italic;
-}
-fieldset{
-    border: 1px solid chocolate;
-    border: 1px solid darkgoldenrod;
-}
-p{
-    border: dashed 2px lightcoral;
-    color: lightcoral;
-    padding: 20px;
+h3{
+    border-top: 2px dashed pink;
+    border-bottom: 2px dashed pink;
+    text-align: center;
+    font-family: cursive;
 }
