@@ -7,7 +7,11 @@
     <title>Document</title>
     <style>
         td{
-            border: 1px solid black;
+            border: 1px solid gray;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        table{
             border-collapse: collapse;
         }
     </style>
@@ -19,7 +23,7 @@
             <?php
             $i = 1;
             while ($i <= 5) { ?>
-                <tr><td>To jest wiersz numer</td></tr>
+                <tr>To jest wiersz numer <?= $i?></tr>
            <?php $i++; } ?>
             
         </tr>
