@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        td{
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        pre
-    </table>
+    <?php
+    $owoce=array_fill(8,5,"mango");
+    ?>
+    <pre><?php print_r($owoce);?></pre>
 </body>
 </html>

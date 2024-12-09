@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        td{
-            border: 1px solid black;
+        h3{
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        pre
-    </table>
+    <?php
+    $indeks=["Tworzenie","stron","aplikacji","internetowych"];
+    list($n1,$n2,$n3,$n4)=$indeks;
+    ?>
+    <h3><?="$n1 ","$n2 i ","$n3 ","$n4"?></h3>
 </body>
 </html>
