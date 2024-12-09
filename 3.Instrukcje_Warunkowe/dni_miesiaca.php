@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <title>31</title>
+    </table>
 </body>
 </html>
