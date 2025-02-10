@@ -26,8 +26,14 @@
         <select name="rok" id="rok" required>
             <option value=""></option>
             <?php
-            foreach (range(1500,2020) as $rok) { ?>
-                <option value="<?= $rok;?>"><?=$rok;?></option>;
+            foreach (range(1500,2020) as $rok) {
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['rok'] == $rok)  {
+                    $selected = 'selected';
+                    }
+                    else{
+                        $selected = '';
+                    } ?>
+                <option <?php echo $selected ?> value="<?= $rok;?>"><?=$rok;?></option>;
             <?php } ?>
         </select>
         <br>
