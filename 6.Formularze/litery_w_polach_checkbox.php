@@ -3,39 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        fieldset{
-            border: 1px solid blue;
-        }
-        label{
-            margin-right: 15px;
-        }
-    </style>
 </head>
 <body>
-    <fieldset>
+    <fieldset style="border: solid, 2px, blue">
         <legend>Alfabet</legend>
+    <form action="" method="POST">
         <?php
-        $litery = range('a','z');
-        ?>
-        <?php foreach ($litery as $key => $value) { ?>
-           <input type="checkbox" name="litera[]" id="litera_<?= $value?>">
-            <label for="litera_<?= $value?>"> <?php echo"$value";?></label>
-           
-        <?php } ?><br>
-        <input type="submit" value="Wybierz">
-        <?php if(isset($value)){
-            $value = 'checked';
+        foreach(range('a','z') as $litera) {
+        if(!empty($_POST) && in_array($litera, $_POST)) {
+            $check = 'checked';
         }
-        else{
-            $val
-        }    
-
+        else {
+            $check = '';
+        }
+     ?>
+        <input <?=$check?> type="checkbox" name="litera_<?= $litera?>" id="litera_<?= $litera?>" value="<?=$litera?>">
+        <label for="litera_<?= $litera?>" style="padding-right: 15px"><?= $litera ?></label>
+    <?php }
+    ?>
+    <br> <input type="submit" value="Wybierz">
+    <?php
+            if (count($_POST)==1) {
+            ?> <p>Ta litera została wybrana: <?= implode('',$_POST)?></p> <?php
+        } 
+        elseif(!empty($_POST)) {
+            ?> <p>Te litery zostały wybrane: <?= implode(', ', $_POST)?></p> <?php
+        }
+        else {
+            ?> <p>Żadna litera nie została wybrana</p> <?php
+        }
         
-        
-
+    ?>
+    </form>
     </fieldset>
-    
 </body>
 </html>
