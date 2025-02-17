@@ -1,0 +1,32 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: skyblue;
+}
+a{      
+    font-size: large;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 50px;
+    text-align: center;    
+}
+
+a:hover{
+    background-color: rgb(155, 203, 245);
+}
+.flex{
+    display: flex;
+    align-content: flex-end;
+}
+input{
+    font-size: large;
+    border-radius: 5px;
+    
+}
+label{
+    font-size: large;
+}
