@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($_SESSION['login_status'])) { ?>
         <form action="" method="post">
             <label for="nazwa">Nazwa<sup>*</sup>:</label>
-            <input type="text" name="nazwa" id="nazwa" placeholder="nazwa" required><br>
+            <input type="text" name="nazwa" id="nazwa" placeholder="nazwa" required readonly value="dobre_haslo"><br>
             <label for="zawartosc">Zawartość:</label><br>
             <textarea name="zawartosc" id="zawartosc" placeholder="zawartosc" cols="50" rows="5" ></textarea><br>
             <label for="expire">Wygasa: (w sekundach)</label><br>

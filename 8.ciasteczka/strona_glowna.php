@@ -10,6 +10,10 @@
     <?php include 'menu.php';?>
     <h1>Ustaw ciasteczko</h1>
     <h3>Jakie powinno być dobre hasło?</h3>
+    <?php if (isset($_COOKIE['dobre_haslo'])) {
+        echo 'Dobrym hasłem jest to oto: ' . $_COOKIE['dobre_haslo'];
+    }
+    ?>
     <pre>
     <?php
         print_r($_COOKIE);
