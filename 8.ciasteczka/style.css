@@ -30,3 +30,10 @@ input{
 label{
     font-size: large;
 }
+sup{
+    color: red;
+}
+footer{
+    padding: 10px;
+    background-color: aquamarine;
+}

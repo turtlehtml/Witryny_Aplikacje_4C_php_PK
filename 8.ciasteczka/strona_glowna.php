@@ -10,14 +10,11 @@
     <?php include 'menu.php';?>
     <h1>Ustaw ciasteczko</h1>
     <h3>Jakie powinno być dobre hasło?</h3>
+    <pre>
     <?php
-    if ($_SERVER['REQUEST_METHOD']==='POST') {
-        $login = "admin";
-        $value = "";
-
-    }
-    setcookie($login,$value,time())
-    ;?>
-    <?php include 'footer.php';?>
+        print_r($_COOKIE);
+    ?>
+    </pre>
+    <?php include 'stopka.php';?>
 </body>
 </html>
