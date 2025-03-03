@@ -22,10 +22,10 @@ Dzięki wirtualnemu hostowi możemy zobaczyć zawartość katalogu Documents/Git
 
 
 <VirtualHost *> 
-	DocumentRoot "C:\Users\ct21kozlowskip\Documents\repozytoria"
-        Alias /repo "C:\Users\ct21kozlowskip\Documents\repozytoria"
+	DocumentRoot "C:\Users\ct21kozlowskip\Documents\GitHub\Witryny_Aplikacje_4C_php_PK"
+        Alias /repo "C:\Users\ct21kozlowskip\Documents\GitHub\Witryny_Aplikacje_4C_php_PK"
     
-	<Directory "C:\Users\ct21kozlowskip\Documents\repozytoria">
+	<Directory "C:\Users\ct21kozlowskip\Documents\GitHub\Witryny_Aplikacje_4C_php_PK">
         Options Indexes FollowSymLinks MultiViews
         Require all granted
         AllowOverride None
