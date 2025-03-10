@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php
-        $errors = ['jeszcze raz nieuku'];
+        $errors = [];
         
         if ($_SERVER['REQUEST_METHOD']==='POST') {
             if(isset($_POST['name'])){
@@ -23,7 +23,8 @@
                     echo "lubie pomarańcze";
                 }
                 else{
-                    print_r($errors);
+                    $errors[]="oooooooooooooooooooooooooooooooooo";
+                    echo "oooooooooooooooooooooooooooooooooooooooo";
             }
             }
         }
