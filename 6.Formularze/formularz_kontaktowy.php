@@ -15,7 +15,6 @@
         background-color: lightblue;
 
     }
-
     span {
         color: red;
         font-size: 14px;
@@ -23,7 +22,6 @@
 </style>
 
 <body> <?php
-
         $err = [
             'nazwa' => '',
             'email' => '',
