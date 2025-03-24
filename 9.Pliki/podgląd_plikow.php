@@ -20,6 +20,7 @@
             background-color: greenyellow;
             border: 1px solid greenyellow;
             border-radius: 5px;
+            
         }
     </style>
 </head>
@@ -29,7 +30,7 @@
     ?>
    <p>Pliki w katalogu<?php $a = scandir($folder);?></p>
     <?php foreach ($a as $key => $value) { ?>
-        <div><?=$value;?> <?= filesize("$folder");?><br></div>
+        <div><?=$value;?> <?= filesize($folder);?><br></div>
     <?php } ?>
     
 </body>
