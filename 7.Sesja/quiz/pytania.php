@@ -23,13 +23,12 @@ if (!isset($_SESSION['question_index'])) {
     ];
     ?>
     <form action="" method="post">
-        <input type="submit" value="asdfghjk" name="p1">
-        <?php if ($_SERVER['REQUEST_METHOD']==="POST" && isset($_POST['p1'])) { ?>
-            <p>Nie</p>
-        <?php } else { ?>
-            <p><?php print_r($questions[0][0]);?><input type="text"></p>
-        <?php } ?>
+    <p>Pytanie nr. <?= $_SESSION['question_index'];?></p>
+    <p><?php print_r($questions[0][0]);?> </p>
+    <?php if (isset($_POST['check'])) {
         
+    }
+    ?>
     </form>
 </body>
 
