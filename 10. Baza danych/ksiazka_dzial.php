@@ -11,9 +11,9 @@
     SELECT k.tytul, k.imie, k.nazwisko, k.cena, k.wydawnictwo, k.miejsce_wyd, k.rok_wyd, k.Objetosc_ks, k.Id_dzial, d.id_dzial, d.nazwa from ksiazki k INNER JOIN dzialy d ON k.Id_dzial = d.Id_dzial;
     <?php
     $servername = "localhost";
-    $username = "kolomanski";
-    $password = "12345678";
-    $database = "kolomanski";
+    $username = "";
+    $password = "";
+    $database = "";
     $con = mysqli_connect($servername, $username, $password, $database);
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -27,7 +27,7 @@
     if (mysqli_num_rows($querry) > 0) {
         while ($row = mysqli_fetch_assoc($querry)) { ?>
             <p><?= $row['k.tytul'] ?></p>
-       <?php }
+    <?php }
     } else {
         echo "0 results";
     }
