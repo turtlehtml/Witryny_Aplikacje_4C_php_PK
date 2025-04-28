@@ -1,0 +1,7 @@
+<a class="<?= ($_GET['page'] ?? '') == 'stanowiska' ? 'active' : '' ?>" href="?page=stanowiska">
+            Tabela <i>stanowiska</i>
+        </a>
+
+<!-- jeśli $_GET['page'] jest ustawione, to weź wartość z $_GET['page'], jeśli nie, to weź pusty tekst i -->
+        <!-- porównaj go z tekstem 'stanowiska'. Jeśli będą sobie równe to dodaj klasę 'active', jeśli nie, to nie dodawaj -->
+        <!-- proste  ¯\_(ツ)_/¯    ¯\_(ツ)_/¯    ¯\_(ツ)_/¯    ¯\_(ツ)_/¯   -->

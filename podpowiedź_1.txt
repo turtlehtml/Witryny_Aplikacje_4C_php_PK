@@ -1,0 +1,11 @@
+        <?php
+	if (isset($_GET['page'])) {
+            if (file_exists('pages/' . $_GET['page'] . '.php')) {
+                include 'pages/' . $_GET['page'] . '.php';
+            } else {
+                echo '<h1>Nie znaleziono żądanej strony</h1>';
+            }
+        } else {
+            include 'pages/glowna.php';
+        }
+        ?>

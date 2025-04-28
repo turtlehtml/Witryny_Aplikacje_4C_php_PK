@@ -25,7 +25,6 @@
     <?php
     if (mysqli_num_rows($querry) > 0) {
         while ($row = mysqli_fetch_assoc($querry)) { ?>
-            <p><q><?= $row['Tytul'] ?></q> - <?= $row['Imie'] ?> <?= $row['Nazwisko'] ?>, wydawnictwo <?= $row['Wydawnictwo'] ?> (<?= $row['Miejsce_wyd'] ?> <?= $row['Rok_wyd'] ?>), <?=$row['Objetosc_ks']?> str. Cena:<?= $row['Cena']?> zł (dział: <?= $row['Nazwa']?>)</p>
     <?php }
     } else {
         echo "0 results";
