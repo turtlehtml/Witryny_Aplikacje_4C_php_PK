@@ -1,7 +1,11 @@
 <h1>Tabela pracownicy</h1>
 <?php
-$querry = mysqli_query($con, "SELECT pracownicy.Id_pracownika, pracownicy.Nazwisko, pracownicy.Imie, pracownicy.Id_stanowisko, pracownicy.Miasto, pracownicy.Data_zatrudnienia, pracownicy.Wynagrodzenie FROM pracownicy;");
+$result = $querry = mysqli_query($con, "SELECT pracownicy.Id_pracownika, pracownicy.Nazwisko, pracownicy.Imie, stanowiska.Nazwa, pracownicy.Miasto, pracownicy.Data_zatrudnienia, pracownicy.Wynagrodzenie FROM pracownicy INNER JOIN stanowiska ON pracownicy.Id_stanowisko=stanowiska.Id_stanowisko ORDER BY `pracownicy`.`Id_pracownika` ASC
+");
 ?>
+<?php
+$rowcount = mysqli_num_rows($result) ?>
+<p>Zawiera <?php echo ($rowcount); ?> wierszy</p>
 <table>
     <tr>
         <th>Id_pracownika</th>
@@ -19,7 +23,7 @@ $querry = mysqli_query($con, "SELECT pracownicy.Id_pracownika, pracownicy.Nazwis
                 <td><?= $row['Id_pracownika']; ?></td>
                 <td><?= $row['Nazwisko']; ?></td>
                 <td><?= $row['Imie']; ?></td>
-                <td><?= $row['Id_stanowisko']; ?></td>
+                <td><?= $row['Nazwa']; ?></td>
                 <td><?= $row['Miasto']; ?></td>
                 <td><?= $row['Data_zatrudnienia']; ?></td>
                 <td><?= $row['Wynagrodzenie']; ?></td>

@@ -1,8 +1,11 @@
 <h1>Tabela wypożyczenia</h1>
 <?php
-$querry = mysqli_query($con, "SELECT wypozyczenia.Nr_transakcji, wypozyczenia.Sygnatura, wypozyczenia.Id_pracownika, wypozyczenia.Nr_czytelnika, wypozyczenia.Data_wypozyczenia, wypozyczenia.Data_zwrotu FROM wypozyczenia;
+$result = $querry = mysqli_query($con, "SELECT wypozyczenia.Nr_transakcji, wypozyczenia.Sygnatura, wypozyczenia.Id_pracownika, wypozyczenia.Nr_czytelnika, wypozyczenia.Data_wypozyczenia, wypozyczenia.Data_zwrotu FROM wypozyczenia;
 ");
 ?>
+<?php
+$rowcount = mysqli_num_rows($result) ?>
+<p>Zawiera <?php echo ($rowcount); ?> wierszy</p>
 <table>
     <tr>
         <th>Nr_transakcji</th>

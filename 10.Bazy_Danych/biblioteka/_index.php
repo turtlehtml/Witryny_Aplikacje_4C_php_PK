@@ -17,7 +17,7 @@
         }
 
         .left {
-            background-color: #0081A7;
+            background-color: #2C2A4A;
             width: 15%;
             /* height: 1000px; */
 
@@ -25,7 +25,7 @@
         }
 
         .right {
-            background-color: #00AFB9;
+            background-color: #4F518C;
             width: 85%;
             height: auto;
             min-height: 150px;
@@ -42,25 +42,33 @@
             padding: 10px;
             width: 100%;
             text-decoration: none;
+            color: white;
 
         }
 
         @media screen {}
 
         a:hover {
-            background-color: black;
-            color: white;
+            background-color: #907AD6;
         }
 
-        .active {
-            background-color: #FDFCDC;
+        a.active {
+            background-color: #907AD6;
+            color: black;
         }
-        td,th{
+
+        td,
+        th {
             border: 1px solid black;
             padding: 10px;
         }
-        table{
+
+        table {
             border-collapse: collapse;
+        }
+        .plus{
+            color: white;
+
         }
     </style>
 </head>

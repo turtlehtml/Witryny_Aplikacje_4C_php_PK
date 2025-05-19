@@ -1,8 +1,11 @@
 <h1>Tabela książki</h1>
 <?php
-$querry = mysqli_query($con, "SELECT ksiazki.Sygnatura, ksiazki.Tytul, ksiazki.Nazwisko, ksiazki.Imie, ksiazki.Wydawnictwo, ksiazki.Miejsce_wyd, ksiazki.Rok_wyd, ksiazki.Objetosc_ks, ksiazki.Cena, ksiazki.Id_dzial FROM ksiazki;
+$result = $querry = mysqli_query($con, "SELECT ksiazki.Sygnatura, ksiazki.Tytul, ksiazki.Nazwisko, ksiazki.Imie, ksiazki.Wydawnictwo, ksiazki.Miejsce_wyd, ksiazki.Rok_wyd, ksiazki.Objetosc_ks, ksiazki.Cena, dzialy.Nazwa FROM ksiazki INNER JOIN dzialy ON ksiazki.Id_dzial=dzialy.Id_dzial ORDER BY `ksiazki`.`Sygnatura` ASC;
 ");
 ?>
+<?php
+$rowcount = mysqli_num_rows($result) ?>
+<p>Zawiera <?php echo ($rowcount); ?> wierszy</p>
 <table>
     <tr>
         <th>Sygnatura</th>
@@ -30,7 +33,7 @@ $querry = mysqli_query($con, "SELECT ksiazki.Sygnatura, ksiazki.Tytul, ksiazki.N
                 <td><?= $row['Rok_wyd']; ?></td>
                 <td><?= $row['Objetosc_ks']; ?></td>
                 <td><?= $row['Cena']; ?></td>
-                <td><?= $row['Id_dzial']; ?></td>
+                <td><?= $row['Nazwa']; ?></td>
             </tr>
     <?php }
     } else {
