@@ -9,7 +9,7 @@ $rowcount = mysqli_num_rows($result) ?>
     <tr>
         <th>Id_dział</th>
         <th>Nazwa</th>
-        <th><a class="plus" href="pages/dzialy_dodaj.php"><span>&#43;</span></a></th>
+        <th><a class="plus" href="?page=dzialy_dodaj"><span>&#43;</span></a></th>
     </tr>
     <?php
     if (mysqli_num_rows($querry) > 0) {
@@ -17,7 +17,7 @@ $rowcount = mysqli_num_rows($result) ?>
             <tr>
                 <td><?= $row['Id_dzial']; ?></td>
                 <td><?= $row['Nazwa']; ?></td>
-                <td></td>
+                <td><a href="?page=dzialy_edycja&id=<?=$row['Id_dzial']?>">edytuj</a></td>
             </tr>
     <?php }
     } else {
