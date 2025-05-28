@@ -2,20 +2,16 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nazwa = htmlspecialchars(trim($_POST['nazwa']));
-    $id= $_POST['id'];
-    $sql= "UPDATE `dzialy` SET `Nazwa` = '$nazwa' WHERE `Id_dzial` = '$id';
-    
-";
+    $id1= $_POST['id1'];
+    $sql= "UPDATE dzialy SET Nazwa='$nazwa' WHERE Id_dzial='$id1' ";
     mysqli_query($con, $sql);
-    print_r($_GET);
-    print_r($_POST);
 } else { ?>
 
     <form action="?page=dzialy_edycja" method="post">
         <table>
             <tr>
                 <td>id_dzial</td>
-                <td><input type="text" disabled name="id" id="id" value="<?=$_GET['id'] ?>"></td>
+                <td><input type="text" name="id1" id="id1" value="<?=$_GET['id'] ?>"></td>
             </tr>
             <tr>
                 <td>Nazwa</td>
