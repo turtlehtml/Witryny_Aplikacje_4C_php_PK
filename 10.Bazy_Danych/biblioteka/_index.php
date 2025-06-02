@@ -18,7 +18,7 @@
 
         .left {
             background-color: #2C2A4A;
-            width: 15%;
+            width: 25%;
             /* height: 1000px; */
 
 
@@ -26,7 +26,7 @@
 
         .right {
             background-color: #4F518C;
-            width: 85%;
+            width: 75%;
             height: auto;
             min-height: 150px;
         }
@@ -61,6 +61,7 @@
         th {
             border: 1px solid black;
             padding: 10px;
+            color: white;
         }
 
         table {
@@ -69,6 +70,22 @@
         .plus{
             color: white;
 
+        }
+        .olowek{
+            color: greenyellow;
+        }
+        .krzyzyk{
+            color: red;
+        }
+        p{
+            color: white;
+            font-size: larger;
+        }
+        .prawo{
+            text-align: right;
+        }
+        h1{
+            color: white;
         }
     </style>
 </head>

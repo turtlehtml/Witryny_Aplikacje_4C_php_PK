@@ -32,7 +32,7 @@ $rowcount = mysqli_num_rows($result) ?>
                 <td><?= $row['Miejsce_wyd']; ?></td>
                 <td><?= $row['Rok_wyd']; ?></td>
                 <td><?= $row['Objetosc_ks']; ?></td>
-                <td><?= $row['Cena']; ?></td>
+                <td class="prawo"><?= explode('.', $row['Cena'])[0]; ?> zł <?= explode('.', $row['Cena'])[1]; ?> gr</td>
                 <td><?= $row['Nazwa']; ?></td>
             </tr>
     <?php }
