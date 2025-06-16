@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -48,7 +51,7 @@
 
         @media screen {}
 
-        a:hover {
+        .left > a:hover {
             background-color: #907AD6;
         }
 
@@ -67,25 +70,42 @@
         table {
             border-collapse: collapse;
         }
-        .plus{
+
+        .plus {
             color: white;
 
         }
-        .olowek{
+
+        .olowek {
             color: greenyellow;
         }
-        .krzyzyk{
+
+        .krzyzyk {
             color: red;
         }
-        p{
+
+        p {
             color: white;
             font-size: larger;
         }
-        .prawo{
+
+        .prawo {
             text-align: right;
         }
-        h1{
+
+        h1 {
             color: white;
+        }
+        .jej{
+            color: greenyellow;
+
+        }
+        .wyl{
+            color: red;
+        }
+        button{
+            background-color: #2C2A4A;
+            
         }
     </style>
 </head>
@@ -93,7 +113,7 @@
 <body>
     <?php include "db/connect.php"; ?>
     <div class="row">
-        <div class="column left">
+        <div class="column left" id="menu">
             <a class="<?= ($_GET['page'] ?? '') == 'glowna' ? 'active' : '' ?>" href="?page=glowna">
                 Strona główna
             </a>
@@ -114,6 +134,10 @@
             </a>
             <a class="<?= ($_GET['page'] ?? '') == 'wypozyczenia' ? 'active' : '' ?>" href="?page=wypozyczenia">
                 Tabela <i>wypożyczenia</i>
+            </a>
+            <hr>
+            <a class="<?= ($_GET['page'] ?? '') == 'logowanie' ? 'active' : '' ?>" href="?page=logowanie">
+                Logowanie
             </a>
         </div>
         <div class="column right">

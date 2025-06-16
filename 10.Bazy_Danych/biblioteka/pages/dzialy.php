@@ -17,7 +17,7 @@ $rowcount = mysqli_num_rows($result) ?>
             <tr>
                 <td><?= $row['Id_dzial']; ?></td>
                 <td><?= $row['Nazwa']; ?></td>
-                <td><a href="?page=dzialy_edycja&id=<?= $row['Id_dzial'] ?>"><span>&#10007;</span></a></td>
+                <td><a href="?page=dzialy_edycja&id=<?= $row['Id_dzial'] ?>"><span>edycja</span></a></td>
             </tr>
     <?php }
     } else {

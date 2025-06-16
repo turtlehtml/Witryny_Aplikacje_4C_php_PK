@@ -10,7 +10,11 @@ $rowcount = mysqli_num_rows($result) ?>
     <tr>
         <th>Id_stanowisko</th>
         <th>Nazwa</th>
+        <?php
+        if ((isset($_SESSION['login_status']) && $_SESSION['login_status'] == 'zalogowany')) { ?>
         <th><a class="plus" href="?page=stanowiska_dodaj"><span>&#10133;</span></a></th>
+        <?php } else {
+        } ?>
     </tr>
     <?php
     if (mysqli_num_rows($querry) > 0) {
@@ -18,10 +22,15 @@ $rowcount = mysqli_num_rows($result) ?>
             <tr>
                 <td style="text-align: center;"><?= $row['Id_stanowisko']; ?></td>
                 <td><?= $row['Nazwa']; ?></td>
-                <td>
-                    <a style="width:auto; float: left;" href="?page=stanowiska_edytuj&id=<?= $row['Id_stanowisko'] ?>" class="olowek"><span>&#128395;</span></a>
-                    <a style="width:auto; float: left;" href="?page=stanowiska_usun&id=<?= $row['Id_stanowisko'] ?>&nazwa2=<?= $row['Nazwa']?>" class="krzyzyk"><span>&#120143;</span></a>
-                </td>
+                <?php
+                if ((isset($_SESSION['login_status']) && $_SESSION['login_status'] == 'zalogowany')) { ?>
+                    <td>
+                        <a style="width:auto; float: left;" href="?page=stanowiska_edytuj&id=<?= $row['Id_stanowisko'] ?>" class="olowek"><span>&#128395;</span></a>
+                        <a style="width:auto; float: left;" href="?page=stanowiska_usun&id=<?= $row['Id_stanowisko'] ?>&nazwa2=<?= $row['Nazwa'] ?>" class="krzyzyk"><span>&#120143;</span></a>
+                    </td>
+                <?php } else {
+                } ?>
+
             </tr>
     <?php }
     } else {
