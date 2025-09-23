@@ -1,0 +1,18 @@
+table {
+	border-collapse: collapse;
+}
+td {
+	padding: 30px;
+}
+#zloto {
+	background-color: gold;
+}
+#kaki {
+	background-color: khaki;
+}
+#srebro {
+	background-color: silver;
+}
+#kraj {
+	background-color: peru;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_tabeli.css">
+</head>
+
+<body>
+    <h1 id="tekst">Zmień kolor tekstu</h1>
+    <table>
+        <tr>
+            <td id="zloto" onmouseover="document.getElementById('tekst').style.color='gold'" onmouseout="document.getElementById('tekst').style.color='black'">gold</td>
+            <td id="kaki" onmouseover="document.getElementById('tekst').style.color='khaki'; this.style.color='khaki'" onmouseout="document.getElementById('tekst').style.color='black'; this.style.color='black'">khaki</td>
+            <td id="srebro" onmouseover="document.getElementById('tekst').style.color='silver'; this.style.color='silver'" onmouseout="document.getElementById('tekst').style.color='black'; this.style.color='black'">silver</td>
+            <td id="kraj" onmouseover="document.getElementById('tekst').style.color='peru'" onmouseout="document.getElementById('tekst').style.color='black'">peru</td>
+        </tr>
+    </table>
+</body>
+
+</html>
