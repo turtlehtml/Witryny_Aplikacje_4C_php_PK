@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div><textarea name="area" id="area" onfocus="this.style.backgroundColor='yellow'"></textarea></div>
+    <p><input type="text" onblur="this.value=this.value.toUpperCase()"></p>
+    <p>
+        <select name="select" id="select" onchange="this.style.color=document.querySelector('#select').value">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="blue">blue</option>
+            <option value="blueviolet">blueviolet</option>
+            <option value="burlywood">burlywood</option>
+            <option value="bisque">bisque</option>
+        </select>
+    </p>
+    <p onclick="this.style.fontSize='xx-large'" ondblclick="this.style.fontSize='medium'">pies</p>
+    <div><img src="zdjecia/pexels-photo-3017987.jpeg" alt="lemur" oncontextmenu="alert(this.src)"></div>
+    <div>
+        <input type="text" onkeyup="document.querySelector('#p').innerHTML=this.value">
+        <p id="p"></p>
+    </div>
+    <h1 onmouseover="this.style.textShadow='2px 2px 5px green'" onmouseout="this.style.textShadow='none'">dupa</h1>
+</body>
+
+</html>
