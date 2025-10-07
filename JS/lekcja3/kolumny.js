@@ -24,3 +24,9 @@ ok.style.textAlign='center'
 ppppp.appendChild(ok)
 const usun = document.getElementById('trzecia')
 usun.remove()
+const zderzak = document.createElement('section')
+const footer = document.querySelector('footer')
+zderzak.style.border = 'dotted 2px blue'
+zderzak.style.padding = '10px 20px'
+zderzak.innerHTML = 'Zderzak'
+footer.after(zderzak)
