@@ -20,3 +20,11 @@ nieone.addEventListener('change', zmianaa)
 function zmianaa(e) {
 	zaruwka.src = 'zdjecia/nie_zarowka.png'
 }
+
+const czek = document.querySelector('#wlancac')
+if(zaruwka.src='zdjecia/tak_zarowka.png'){
+    czek = true
+}
+else{
+    czek = false
+}
