@@ -10,36 +10,36 @@
         table{
             margin: 0 auto;
             border-collapse: collapse;
+            width: 100%;
         }
         td{
             width: 50%;
             text-align: center;
             border: 2px darkblue solid;
         }
-        .guziki{
-            width: 100%;
-            
-            
-        }    
+         .kolor{
+            background-color: darkblue;
+            color: white;
+         }
     </style>
 </head>
 
 <body>
     <table>
         <tr>
-            <td colspan="2"><img src="zdjecia/nie_zarowka.png" alt=""></td>
+            <td colspan="2"><img src="zdjecia/nie_zarowka.png" alt="" id="niezar"></td>
         </tr>
         <tr>
-            <td class="guziki">1</td>
-            <td class="guziki">2</td>
+            <td class="guziki kolor"><input type="button" value="Włącz" id="on" onclick="pierwsze()"></td>
+            <td class="guziki kolor"><input type="button" value="Wyłącz" id="off" onclick="drugie()"></td>
         </tr>
         <tr>
-            <td class="guziki">3</td>
-            <td class="guziki">4</td>
+            <td class="guziki"><input type="radio" name="wlacz" id="wlacz"><label for="wlacz">Włączona</label></td>
+            <td class="guziki"><input type="radio" name="wlacz" id="wylacz"><label for="wylacz">Wyłączona</label></td>
         </tr>
         <tr>
-            <td class="guziki">5</td>
-            <td class="guziki">6</td>
+            <td class="guziki kolor" colspan="2"><input type="checkbox" name="wylacz" id="wylacz">Włączona</td>
+            
         </tr>
     </table>
 </body>
