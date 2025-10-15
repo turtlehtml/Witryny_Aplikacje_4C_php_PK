@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 10px;
+        }
+    </style>
+    <script defer src="prostokaty.js"></script>
+</head>
+<body>
+    <form action="">
+     <label for="szer">Szerokość:</label>   
+     <input type="number" name="szer" id="szer" min="0" max="20" value="0">
+     <label for="wys">Wysokość:</label>
+     <input type="number" name="wys" id="wys" min="0" max="20" value="0">
+     <label for="kolor">Kolor:</label>
+     <input type="color" name="kolor" id="kolor" value="#ffffff">
+     <input type="button" value="Narysuj" id="guzik">
+    </form>
+    <div></div>
+    <p>Obwód prostokąta jest równy <span id="obw"></span> cm</p>
+    <p>Pole prostokąta jest równe <span id="pole"></span> cm<sup>2</sup></p>
+
+</body>
+</html>
