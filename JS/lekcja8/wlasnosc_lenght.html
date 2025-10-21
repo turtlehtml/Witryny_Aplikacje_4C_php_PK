@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .akapit{
+            background-color: #ffdfd3;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Jan Chryzastom Pasek z Gosławic herbu Doliwa</p>
+    <p class="akapit">Tekst powyżej ma długość <span id="policz"></span> znaki</p>
+    <button id="guzik">Policz znaki</button>
+    <script>
+        const paragraf1 = document.querySelector('#p1')
+        const policz = document.querySelector('#policz')
+        const guzik =  document.querySelector('#guzik')
+        guzik.addEventListener('click',liczenie)
+        function liczenie(){
+            policz.innerHTML=paragraf1.innerHTML.length
+        }
+    </script>
+</body>
+</html>

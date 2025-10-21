@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #frank {
+            width: min-content;
+        }
+        #end{
+            width: max-content;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Funkcja substring()</legend>
+        <p id="p1">Fryderyk Franciszek Chopin - polski kompozytor i pianista.</p>
+        <p id="frank"></p>
+        <button id="guzik1">Wytnij znaki od 9 do 19</button>
+        <p id="end"></p>
+        <button id="guzik2">Wytnij znaki od 27 do końca</button>
+        <script>
+            const p1 = document.querySelector('#p1')
+            const frank = document.querySelector('#frank')
+            const guzik1 = document.querySelector('#guzik1')
+            const end = document.querySelector('#end')
+            const guzik2 = document.querySelector('#guzik2')
+            guzik1.addEventListener('click', wyciac)
+            function wyciac() {
+                frank.innerHTML = (p1.innerHTML.substring(9, 19))
+                frank.style.border = '4px dotted crimson'
+                frank.style.padding = '8px'
+            }
+            guzik2.addEventListener('click', ciac)
+            function ciac() {
+                end.innerHTML = (p1.innerHTML.substring(27))
+                end.style.border = '3px double crimson'
+                end.style.padding = '8px'
+            }
+        </script>
+    </fieldset>
+</body>
+
+</html>

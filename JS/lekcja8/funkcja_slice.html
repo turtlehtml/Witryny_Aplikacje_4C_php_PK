@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #poli {
+            font-size: 30px;
+            text-shadow: 3px 3px 5px red;
+        }
+
+        #niemiec {
+            font-size: 30px;
+            font-style: italic;
+            text-shadow: 2px 2px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Mikołaj Kopernik - polski polihistor pochodzenia niemieckiego </p>
+    <p id="poli"></p>
+    <button id="od">Wytnij znaki od 26 do 36</button>
+    <p id="niemiec"></p>
+    <button id="odk">Wytnij znaki od końca: 5 do 12</button>
+    <script>
+        const guzik1 = document.querySelector('#od')
+        const guzik2 = document.querySelector('#odk')
+        const p1 = document.querySelector('#p1')
+        const poli = document.querySelector('#poli')
+        const niemiec = document.querySelector('#niemiec')
+        guzik1.addEventListener('click', ciac)
+        function ciac() {
+            poli.innerHTML = (p1.innerHTML.slice(26, 36))
+        }
+        guzik2.addEventListener('click', ciachac)
+        function ciachac() {
+            niemiec.innerHTML = (p1.innerHTML.slice(-13, -6))
+        }
+    </script>
+</body>
+
+</html>
