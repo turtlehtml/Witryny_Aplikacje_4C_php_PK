@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">0|1|1|2|3|5|8</p>
+    <button id="guzik1">Utwórz tablicę liczb i wyświetl ją w konsoli</button>
+    <p id="p2">Jak nazywamy rozgrywane w całości albo we fragmentach danej gry komputerowej z zamiarem jak najszybszego jej ukończenia? Speedrun</p>
+    <button id="guzik2">Utwórz tablicę wyrazów, ale w konsoli wyświetl tylko 17 pierwszych elementów tablicy</button>
+    <script>
+        const p1 =  document.querySelector('#p1')
+        const p2 = document.querySelector('#p2')
+        const guzik1 =  document.querySelector('#guzik1')
+        const guzik2 =  document.querySelector('#guzik2')
+        const tekst1 =  p1.innerHTML.split('|')
+        const tekst2 = p2.innerHTML.split(' ',17)
+        guzik1.addEventListener('click',wyswietl)
+        function wyswietl(){
+            console.table([tekst1])
+        }
+        guzik2.addEventListener('click',tabela)
+        function tabela(){
+            console.table([tekst2])
+        }
+    </script>
+</body>
+</html>

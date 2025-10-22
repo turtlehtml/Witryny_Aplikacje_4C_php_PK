@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Stefan Banach</p>
+    <button id="guzik1">Wypełnij tekst na początku podkreśleniami, aby miał długość 20 znaków</button><br><br>
+    <button id="guzik2">Wypełnij tekst na końcu kropkami, aby miał długość 30 znaków</button>
+    <script>
+        const p1 =  document.querySelector('#p1')
+        const guzik1 =  document.querySelector('#guzik1')
+        const guzik2 =  document.querySelector('#guzik2')
+        guzik1.addEventListener('click',zmiana)
+        function zmiana(){
+            p1.innerHTML=p1.innerHTML.padStart(20,'_')
+        }
+        guzik2.addEventListener('click',czejndz)
+        function czejndz(){
+            p1.innerHTML=p1.innerHTML.padEnd(30,'.')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+const odp =  document.getElementsByClassName('answer')
