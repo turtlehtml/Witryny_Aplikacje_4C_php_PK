@@ -1,0 +1,41 @@
+* {
+    font-family: cursive;
+}
+
+#p1 {
+    font-size: 30px;
+    font-weight: bold;
+    border-top: 4px dashed navy;
+    border-bottom: 4px dashed navy;
+    background-color: #c6b6f0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    background-color: #e1cffc;
+    border-top: 4px dashed navy;
+    border-bottom: 4px dashed navy;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#p2 {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    background-color: #f4e0ff;
+    border-top: 4px dashed navy;
+    border-bottom: 4px dashed navy;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
