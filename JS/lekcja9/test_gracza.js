@@ -1,4 +1,4 @@
-const odpowiedzi = ["cyberpunk", "notch", "rockstar", "link", "zielony", "steam", "fortnite", "sonic"];
+const odpowiedzi = ["lag", "2009", "rockstar", "noob", "pięćnocyufreddy,ego", "steam", "grandtheftauto", "respawn"];
 const lista = document.querySelectorAll("li");
 
 lista.forEach((li, index) => {
@@ -18,7 +18,7 @@ link.addEventListener("click", function () {
         link.style.display = "none";
         prostokat.style.display = "none";
     } else {
-        alert("Niestety, to nie jest poprawna odpowiedź");
+        alert("Pomyliłeś się");
     }
 });
 });
