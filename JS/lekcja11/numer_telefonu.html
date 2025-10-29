@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            filter: blur(10px);
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Numer telefonu: 12<span class="header">3</span>-<span class="header">456</span>-<span class="header">789</span></h1>
+    <form action="">
+        <input type="checkbox" name="guzik" id="klocek">
+        <label for="guzik">Pokaż cały numer telefonu</label>
+    </form>
+    <script>
+        let guzik =  document.querySelector('#klocek')
+        const spans =  document.querySelectorAll('span')
+        spans.className='header'
+        guzik.checked=false
+        guzik.addEventListener('click',blurowanie)
+        function blurowanie() {
+            if (guzik.checked===true) {
+                spans.forEach(span => {
+                    span.classList.remove('header')
+                });
+            } else {
+                spans.forEach(span => {
+                    span.classList.add('header')
+                });
+            }
+        }
+        
+    </script>
+</body>
+</html>
