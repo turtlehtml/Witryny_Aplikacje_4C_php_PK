@@ -8,6 +8,7 @@ let v2 = i2.value
 if (v1 <= 500 && v2 <= 500) {
     guzik.addEventListener('click', generowanie)
 		function generowanie() {
+            square.innerHTML=''
 			for (let index = 1; index <= v2; index++) {
 				let row = document.createElement('tr')
 				let tr = square.appendChild(row)
