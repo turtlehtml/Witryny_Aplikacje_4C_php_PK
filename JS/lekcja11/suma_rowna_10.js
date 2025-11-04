@@ -3,9 +3,9 @@ let h3 = document.querySelector('h3')
 let rzeczy = document.querySelector('.rzeczy')
 let zliczenie = 0
 for (let index = 100; index <= 999; index++) {
-    const elementy = rzeczy[index]
+    // const elementy = rzeczy[index]
     // okno.innerHTML += `${index}`
-    if (index === 1000) {
+    if (index === 999) {
         okno.innerHTML += `. `
     } else {
         okno.innerHTML += `, `
@@ -18,7 +18,7 @@ for (let index = 100; index <= 999; index++) {
     console.log(`${index}: ${setka} + ${dycha} + ${jedna} = ${suma}`)
 
     const red =  document.createElement('b')
-    red.innerText = index
+    red.innerHTML = index
 
     if (suma === 10) {
         red.style.color='red'
