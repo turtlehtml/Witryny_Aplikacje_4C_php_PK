@@ -5,8 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="zegar.js"></script>
+    <style>
+        .wzor{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .kont{
+            display: flex;
+            gap: 10px;
+        }
+        .inp{
+            border: 1px solid black;
+            border-radius: 5px;
+            width: max-content;
+            padding: 10px;
+        }
+        #p_h,#p_m{
+            border-bottom: 1px solid black;
+            text-align: right;
+        }
+        .obw{
+            border: 1px solid black;
+            width: 125px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #wynik{
+            border-bottom: 1px solid black;
+            text-align: right;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-    
+    <h2>Miara kąta między wskazówkami zegara</h2>
+    <div class="wzor">
+        <p>Miarę kąta między wskazówką minutową a godzinową można obliczyć według wzoru</p>
+        <img src="zdjecia/task_689.png" alt="wzór">
+    </div><br>
+    <div class="kont">
+        <div class="inp">
+            <label for="hour">Godziny h &#8712; [0, 11]</label><br>
+            <input type="range" min="0" max="11" id="hour" value="0">
+            <p id="p_h"></p>
+        </div>
+        <div class="inp">
+            <label for="minuta">Minuty m &#8712; [0, 60]</label><br>
+            <input type="range" min="0" max="60" id="minuta" value="0">
+            <p id="p_m"></p>
+        </div>
+    </div>
+    <p><img src="zdjecia/43ed2a9243b954d356e11f691f6891c3.jpg" alt="zegar" height="300px" width="300px"></p>
+    <div class="obw">
+        <p>Kąt</p>
+        <p id="wynik"></p>
+    </div>
 </body>
 </html>
