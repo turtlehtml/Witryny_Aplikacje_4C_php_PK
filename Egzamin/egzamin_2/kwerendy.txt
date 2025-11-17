@@ -1,0 +1,4 @@
+1.SELECT imieniny.data FROM imieniny WHERE imiona LIKE '%Karola%'; 
+2.SELECT imieniny.imiona FROM imieniny WHERE imieniny.data BETWEEN '04-01' AND '04-30' ORDER BY `data` ASC 
+3.SELECT COUNT(imieniny.data) FROM imieniny WHERE imieniny.imiona LIKE '%mir%'; 
+4.ALTER TABLE imieniny ADD zyczenia varchar(500); 
