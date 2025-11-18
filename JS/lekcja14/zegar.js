@@ -1,21 +1,24 @@
-const value = document.querySelector("#p_h");
-const input = document.querySelector("#hour");
+const wartosc = document.querySelector('#pg')
+const zakres = document.querySelector('#godzinka')
+const wartosc1 = document.querySelector('#pm')
+const zakres1 = document.querySelector('#minuta')
+let liczenie = (30 * `${wartosc}` - ((11/2) * `${wartosc1}`))
 const wynik = document.querySelector('#wynik')
-value.innerHTML = input.value;
-input.addEventListener("input", (event) => {
-    value.textContent = event.target.value;
-    let ojej = 30*`${value}` - ((11/2)*`${value1}`)
-    wynik.innerHTML=ojej + `&#176;`
+let zawartosc = wartosc.value
+let zawartosc1 = wartosc1.value 
 
-});
 
-const value1 = document.querySelector("#p_m");
-const input1 = document.querySelector("#minuta");
-value1.textContent = input1.value;
-input1.addEventListener("input", (event) => {
-    value1.textContent = event.target.value;
-    let ojej = 30*`${value}` - ((11/2)*`${value1}`)
-    wynik.innerHTML=ojej + `&#176;`
-});
+wartosc.textContent = zakres.value
+zakres.addEventListener('input', event => {
+	wartosc.textContent = event.target.value
+    wynik.innerText=liczenie
+    console.log(zawartosc)
+})
 
+
+wartosc1.textContent = zakres1.value
+zakres1.addEventListener('input', event => {
+	wartosc1.textContent = event.target.value
+    wynik.innerText = liczenie
+})
 
