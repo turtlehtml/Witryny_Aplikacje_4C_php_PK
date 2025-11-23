@@ -1,31 +1,25 @@
 const wartosc = document.querySelector('#pg')
-const zakres = document.querySelector('#godzinka')
 const wartosc1 = document.querySelector('#pm')
+const zakres = document.querySelector('#godzinka')
 const zakres1 = document.querySelector('#minuta')
 const wynik = document.querySelector('#wynik')
+wynik.innerHTML = `0 &#176`
+wartosc.innerText = zakres.value
+wartosc1.innerText = zakres1.value
+let liczenie = 30 * `${wartosc.value}` - (11 / 2) * `${wartosc1.value}`
+zakres.addEventListener('input', event => {
+	wartosc.innerText = event.target.value
+    let liczenie = Math.abs(30 * `${wartosc.value}` - (11 / 2) * `${wartosc1.value}`)
+    wynik.innerHTML = liczenie +`&#176;`
 
-function policz() {
-    // Konwersja na liczby
-    const h = Number(zakres.value)
-    const m = Number(zakres1.value)
-
-    // Wzór
-    return Math.abs(30 * h - (11 / 2) * m)
-}
-
-// Ustawienia początkowe
-wartosc.textContent = zakres.value
-wartosc1.textContent = zakres1.value
-wynik.innerText = policz()
-
-zakres.addEventListener('input', e => {
-    wartosc.textContent = e.target.value
-    wynik.innerText = policz()
 })
-
-zakres1.addEventListener('input', e => {
-    wartosc1.textContent = e.target.value
-    wynik.innerText = policz()
+zakres1.addEventListener('input', event2 =>{
+    wartosc1.innerText = event2.target.value
+    let liczenie = Math.abs(30 * `${wartosc.value}` - (11 / 2) * `${wartosc1.value}`)
+    wynik.innerHTML = liczenie+`&#176;`
+    
 })
 
 
+
+ 
