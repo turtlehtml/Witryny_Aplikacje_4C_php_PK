@@ -5,18 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalendarz</title>
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="/Egzamin/egzamin_2/INF.03-03-25.01-SG/styl.css">
 </head>
 
 <body>
     <header>
         <h1>Dni, miesiące, lata</h1>
     </header>
-    <section>
-        <p>skrypt1</p>
+    <section id="napis">
+        <p>
+            <?php
+        $connect = mysqli_connect('localhost', 'root', '', 'kalendarz');
+        $today = date('m-d');
+        $query = mysqli_query($connect, "SELECT imiona FROM imieniny WHERE data = '$today';");
+        $day = date('w');
+        if ($day == 0) {
+            $weekDay = "niedziela";
+        }
+        if ($day == 1) {
+            $weekDay = "poniedziałek";
+        }
+        if ($day == 2) {
+            $weekDay = "wtorek";
+        }
+        if ($day == 3) {
+            $weekDay = "środa";
+        }
+        if ($day == 4) {
+            $weekDay = "czwartek";
+        }
+        if ($day == 5) {
+            $weekDay = "piątek";
+        }
+        if ($day == 6) {
+            $weekDay = "sobota";
+        }
+        $result = mysqli_fetch_array($query);
+        $fullDate = date('d-m-Y');
+        echo "<p>Dzisiaj jest {$weekDay}, {$fullDate}, imieniny: {$result['imiona']}</p>";
+        ?>
+        </p>
     </section>
-    <main>
-        <section>
+    <div class="flexbox">
+        <aside class="blewy">
             <table>
                 <tr>
                     <th>liczba dni</th>
@@ -62,16 +93,25 @@
                     <td>luty</td>
                 </tr>
             </table>
-        </section>
-        <section>
+        </aside>
+        <main>
             <h2>Sprawdź kto ma urodziny</h2>
-            <form action="kalendarz.php" method="get">
-                <input type="date" name="data" id="data" min="2024-01-01" max="2024-12-31" required value="2024-01-01">
-                <input type="submit" value="Wyślij">
+            <form action="kalendarz.php" method="post">
+                <input type="date" name="date" id="date" min="2024-01-01" max="2024-12-31" required value="2024-01-01">
+                <input type="submit" name="submit" value="Wyślij">
             </form>
-            <span>skrypt2</span>
-        </section>
-        <section>
+            <?php
+            if (isset($_POST["submit"])) {
+                $date = $_POST["date"];
+                $monthAndDay = date('m-d', strtotime($date));
+                $query2 = mysqli_query($connect, "SELECT imiona FROM imieniny WHERE data = '$monthAndDay';");
+                $result2 = mysqli_fetch_array($query2);
+                echo "Dnia {$date} są imieniny: {$result2['imiona']}";
+            }
+            mysqli_close($connect);
+            ?>
+        </main>
+        <aside class="bprawy">
             <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów" target="_blank">
                 <img src="kalendarz.gif" alt="Kalendarz Majów">
             </a>
@@ -93,10 +133,10 @@
                     </ul>
                 </li>
             </ol>
-        </section>
-    </main>
+        </aside>
+    </div>
     <footer>
-
+        <p>Strone opracował(a): 1234567890</p>
     </footer>
 </body>
 
