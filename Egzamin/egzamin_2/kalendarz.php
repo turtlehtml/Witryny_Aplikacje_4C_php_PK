@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalendarz</title>
-    <link rel="stylesheet" href="/Egzamin/egzamin_2/INF.03-03-25.01-SG/styl.css">
+    <link rel="stylesheet" href="/egzamin_2/INF.03-03-25.01-SG/styl.css">
 </head>
 
 <body>
