@@ -1,0 +1,4 @@
+1.SELECT uczniowie.imie,uczniowie.nazwisko,uczniowie.klasa FROM uczniowie WHERE uczniowie.klasa='2B'; 
+2.
+3.SELECT DISTINCT(uczniowie.imie),(uczniowie.nazwisko),(uczniowie.klasa) FROM uczniowie JOIN zamowienia on uczniowie.id_ucznia=zamowienia.id_ucznia JOIN posilki ON posilki.id_posilku=zamowienia.id_posilku WHERE posilki.wegetarianski=1;
+4.SELECT posilki.id_typu,COUNT(posilki.id_posilku) FROM posilki GROUP BY posilki.id_typu;  
