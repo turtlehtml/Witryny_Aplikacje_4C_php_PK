@@ -30,8 +30,8 @@ kolorowy.addEventListener('click',kolorowanie)
 function kolorowanie() {
     pomarancza.style.filter='grayscale(0%)'
 }
-blackwhite.addEventListener('click',szare)
-function szare() {
+blackwhite.addEventListener('click',szarosc)
+function szarosc() {
     pomarancza.style.filter='grayscale(100%)'
 }
 
