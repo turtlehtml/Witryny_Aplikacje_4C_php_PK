@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <div class="flex1">
+            <section>
+                <img src="pliki12/pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola"><br>
+                <span>
+                    <input type="radio" name="Blur" id="blur">
+                    <label for="Blur">Blur</label><br>
+                    <input type="radio" name="Blur" id="Sepia">
+                    <label for="Sepia">Sepia</label><br>
+                    <input type="radio" name="Blur" id="negatyw">
+                    <label for="Negatyw">Negatyw</label><br>
+                    <button id="btn">Zastosuj</button>
+                </span>
+            </section>
+            <section>
+                <img src="pliki12/pomarancza.jpg" alt="drzewo pomarańczy" id="pomarancza"><br>
+                <button id="kolorowy">Kolorowy</button>
+                <button id="czarnobialy">Czarno-biały</button>
+            </section>
+        </div>
+        <div class="flex2">
+            <section>
+                <img src="pliki12/owoce.jpg" alt="Kosz pełen owoców" id="owoceobraz">
+                <input type="range" name="owoce" id="owoce" min="0" max="100" value="100"><br>
+                <button id="btn1">Zastosuj</button>
+            </section>
+            <section>
+                <img src="pliki12/zolw.jpg" alt="Żółw w wodzie" id="zolwobraz">
+                <input type="range" name="zolw" id="zolw" min="0" max="250"><br>
+                <button id="btn2">Zastosuj</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Strone wykonał: 1234567890</p>
+    </footer>
+</body>
+
+</html>
