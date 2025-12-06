@@ -19,7 +19,7 @@
             </header>
         </div>
         <menu>
-            <form action="poziomrzeki.html" method="post">
+            <form action="poziomrzeki.php" method="post">
                 <input type="radio" name="opcja" value="wszystko" id="wszystko">
                 <label for="wszystkie">Wszystkie</label>
                 <input type="radio" name="opcja" value="pso" id="pso">
@@ -42,70 +42,72 @@
                     <th>Aktualny</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect("localhost","root","","rzeki");
-                $btn = $_POST['btn'];
-                $opcja = $_POST['opcja'];
-                if (isset($opcja) && $opcja === "wszystko" && isset($btn)) {
-                    $result=mysqli_query($connect,"SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05';");
-                    while( $row=mysqli_fetch_assoc($result) ) { ?>
-                <tr>
-                    <td>
-                        <?= $row['nazwa'];?>
-                    </td>
-                    <td>
-                        <?= $row['rzeka'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanOstrzegawczy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanAlarmowy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanWody'];?>
-                    </td>
-                </tr>
-                <?php } ?>
-                <?php } elseif (isset($opcja) && $opcja === "pso" && isset($btn)) {
-                    $result=mysqli_query($connect,"SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05' AND pomiary.stanWody>wodowskazy.stanOstrzegawczy;");
-                    while( $row=mysqli_fetch_assoc($result) ) { ?>
-                <tr>
-                    <td>
-                        <?= $row['nazwa'];?>
-                    </td>
-                    <td>
-                        <?= $row['rzeka'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanOstrzegawczy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanAlarmowy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanWody'];?>
-                    </td>
-                </tr>
-                <?php }} else {
-                    $result=mysqli_query($connect,"SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05' AND pomiary.stanWody>wodowskazy.stanAlarmowy;");
-                    while( $row=mysqli_fetch_assoc($result) ) { ?>
-                <tr>
-                    <td>
-                        <?= $row['nazwa'];?>
-                    </td>
-                    <td>
-                        <?= $row['rzeka'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanOstrzegawczy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanAlarmowy'];?>
-                    </td>
-                    <td>
-                        <?= $row['stanWody'];?>
-                    </td>
-                    <?php }} ?>
+                $connect = mysqli_connect("localhost", "root", "", "rzeki");
+                // $btn = $_POST['btn'];
+                // $opcja = $_POST['opcja'];
+                if (isset($_POST['opcja']) && $_POST['opcja'] === "wszystko" && isset($_POST['btn'])) {
+                    $result = mysqli_query($connect, "SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05';");
+                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td>
+                                <?= $row['nazwa']; ?>
+                            </td>
+                            <td>
+                                <?= $row['rzeka']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanOstrzegawczy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanAlarmowy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanWody']; ?>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                    <?php } elseif (isset($_POST['opcja']) && $_POST['opcja'] === "pso" && isset($_POST['btn'])) {
+                    $result = mysqli_query($connect, "SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05' AND pomiary.stanWody>wodowskazy.stanOstrzegawczy;");
+                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td>
+                                <?= $row['nazwa']; ?>
+                            </td>
+                            <td>
+                                <?= $row['rzeka']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanOstrzegawczy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanAlarmowy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanWody']; ?>
+                            </td>
+                        </tr>
+                    <?php }
+                } else {
+                    $result = mysqli_query($connect, "SELECT wodowskazy.nazwa,wodowskazy.rzeka,wodowskazy.stanOstrzegawczy,wodowskazy.stanAlarmowy,pomiary.stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id=pomiary.wodowskazy_id WHERE pomiary.dataPomiaru='2022-05-05' AND pomiary.stanWody>wodowskazy.stanAlarmowy;");
+                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td>
+                                <?= $row['nazwa']; ?>
+                            </td>
+                            <td>
+                                <?= $row['rzeka']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanOstrzegawczy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanAlarmowy']; ?>
+                            </td>
+                            <td>
+                                <?= $row['stanWody']; ?>
+                            </td>
+                    <?php }
+                } ?>
             </table>
 
         </aside>
@@ -117,12 +119,12 @@
                 <li>Średnie stany wód</li>
             </ul>
             <h3>Średnie stany wód</h3>
-            <?php $result=mysqli_query($connect,"SELECT pomiary.dataPomiaru,AVG(pomiary.stanWody) FROM pomiary GROUP BY pomiary.dataPomiaru;");
-            while( $row=mysqli_fetch_assoc($result) ) { ?>
-            <p>
-                <?=$row['dataPomiaru'];?>:
-                <?=$row['AVG(pomiary.stanWody)'];?>
-            </p>
+            <?php $result = mysqli_query($connect, "SELECT pomiary.dataPomiaru,AVG(pomiary.stanWody) FROM pomiary GROUP BY pomiary.dataPomiaru;");
+            while ($row = mysqli_fetch_assoc($result)) { ?>
+                <p>
+                    <?= $row['dataPomiaru']; ?>:
+                    <?= $row['AVG(pomiary.stanWody)']; ?>
+                </p>
             <?php } ?>
             <a href="https://komunikaty.pl">Dowiedz się więcej</a>
             <img src="pliki3/obraz2.jpg" alt="rzeka">
