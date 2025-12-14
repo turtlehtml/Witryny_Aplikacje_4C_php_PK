@@ -34,7 +34,7 @@
                 <?php } else { ?>
                     <p>Autor: <?= $row['imie'];?> <?= $row['nazwisko'];?></p>
                 <?php } ?>
-                <a href="<?= $row['plik'];?>">Pobierz</a>
+                <a href="<?= $row['plik'];?>" download>Pobierz</a>
             </section>
             <?php } ?>
         </main>

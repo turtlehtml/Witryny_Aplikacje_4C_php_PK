@@ -23,7 +23,7 @@ img{
 section{
     display: flex;
     width: 46%;
-    margin: 2px;
+    margin: 2%;
     position: relative;
 }
 h3,p,a{
@@ -63,5 +63,6 @@ section:hover > a{
 }
 main{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* gap: 50px; */
 }
