@@ -1,0 +1,56 @@
+*{
+    font-family: Cambria;
+}
+aside{
+    background-color: #E1BEE7;
+    width: 25%;
+}
+.l1{
+    height: 400px;
+    float: left;
+}
+.l2{
+    height: 330px;
+    float: left;
+}
+section{
+    width: 75%;
+    font-size: 170%;
+    text-align: center;
+}
+.p1{
+    background-color: #9C64A6;
+    color: white;
+    height: 150px;
+    letter-spacing: 5px;
+    float: right;
+}
+.p2{
+    color: indigo;
+    height: 580px;
+    float: right;
+}
+footer{
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+h2{
+    text-align: center;
+}
+ul{
+    list-style-type: circle;
+}
+img{
+    padding: 4px;
+    margin: 15px;
+}
+img:hover{
+    padding: 3px;
+    border: 1px dashed indigo;
+}
+.strona{
+    padding: 25px;
+}
+

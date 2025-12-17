@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <aside class="l1">
+        <h2>Nasza oferta</h2>
+        <ol>
+            <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                <ul>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ul>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+        <a href="index.html" class="strona">Strona główna</a>
+    </aside>
+    <section class="p1">
+        <h1>Usługi kosmetyczne</h1>
+    </section>
+    <section class="p2">
+        <h3>Kalkulator ceny wizyty</h3>
+        <input type="checkbox" name="peeling" id="peeling" value="45">
+        <label for="peeling">Peeling</label><br>
+        <input type="checkbox" name="maska" id="maska" value="30">
+        <label for="maska">Maska</label><br>
+        <input type="checkbox" name="masaz" id="masaz" value="20">
+        <label for="masaz">Masaż twarzy</label><br>
+        <input type="checkbox" name="makeup" id="makeup" value="50">
+        <label for="makeup">Makijaż</label><br>
+        <button id="przycisk" onclick="oblicz()">Oblicz cenę</button>
+        <p id="wynik"></p>
+    </section>
+    <aside class="l2">
+        <img src="obraz1.jpg" alt="Personel">
+    </aside>
+    <footer>
+        <p>Autor: 1234567890</p>
+    </footer>
+</body>
+
+</html>
