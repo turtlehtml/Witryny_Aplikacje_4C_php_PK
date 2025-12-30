@@ -1,0 +1,49 @@
+body{
+    background-color: #EEEEEE;
+    font-family: 'Helvetica';
+}
+section.kontener{
+    width: 90%;
+    margin: auto;
+}
+section#logo,menu{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+header#baner{
+    background-color: #DDDDDD;
+    height: 200px;
+}
+main{
+    color: navy;
+    margin: 50px;
+    height: 400px;
+    margin: 0;
+}
+footer{
+    text-align: right;
+    background-color: lightblue;
+    padding: 10px;
+}
+#przycisk1,#przycisk2{
+    background-color: lightblue;
+    color: navy;
+}
+menu > a{
+    color: navy;
+    font-size: 150%;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+}
+menu > a:hover{
+    border: 1px solid navy;
+}
+.flexbox{
+    display: flex;
+}

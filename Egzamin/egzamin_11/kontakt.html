@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <section class="kontener">
+        <div class="flexbox">
+            <section id="logo"><img src="logo.png" alt="firma it"></section>
+            <menu>
+                <a href="index.html">Strona Główna</a>
+                <a href="uslugi.html">Usługi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </menu>
+        </div>
+        <header id="baner">
+            <img src="animacja.gif" alt="Usługi informatyczne">
+        </header>
+        <main>
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" name="imie" id="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" name="nazwisko" id="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Zgłoszenie:</td>
+                    <td><textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="regulamin" id="regulamin"><label for="">Zapoznałam/em się z regulaminem</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="reset" value="Resetuj" id="przycisk1"><button id="przycisk2">Prześlij</button></td>
+                </tr>
+            </table>
+            <hr>
+            <p id="wynik"></p>
+        </main>
+        <footer>Autor strony: <strong>1234567890</strong></footer>
+    </section>
+</body>
+</html>
