@@ -1,0 +1,4 @@
+1.SELECT DISTINCT(dane.imie) FROM dane WHERE dane.plec='k'; 
+2.SELECT dane.imie,SUM(dane.liczebnosc) FROM dane WHERE dane.plec='m' GROUP BY dane.imie ORDER BY dane.liczebnosc DESC LIMIT 5; 
+3.SELECT dane.imie,SUM(dane.liczebnosc),wojewodztwa.nazwa FROM dane JOIN wojewodztwa ON dane.id_woj=wojewodztwa.id WHERE wojewodztwa.nazwa='MAZOWIECKIE' GROUP BY dane.imie ORDER BY dane.liczebnosc DESC limit 1; 
+4.SELECT DISTINCT(dane.imie) FROM dane WHERE dane.imie LIKE '___'; 

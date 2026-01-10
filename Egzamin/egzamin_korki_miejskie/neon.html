@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="baner.png" alt="grafika z logiem">
+    </header>
+    <section id="blokgorny">
+        <p id="egzamin">Egzamin</p>
+    </section>
+    <main>
+        <section id="bloklewy">
+                <label for="tresc">Treść neonu</label><br>
+                <input type="text" maxlength="10" name="tresc" id="tresc"><br>
+            <button id="przycisk">Zastosuj</button>
+        </section>
+        <section id="bloksrodkowy">
+            <label for="kolor">Kolor neonu</label><br>
+            <label for="czerwony">R</label><input type="range" min="0" max="255" value="255" id="RED"><br>
+            <label for="zielony">G</label><input type="range" min="0" max="255" value="0" id="GREEN"><br>
+            <label for="niebieski">B</label><input type="range" min="0" max="255" value="0" id="BLUE">
+        </section>
+        <aside>
+            <label for="rozmiar"></label>
+            <input type="number" name="rozmiar" id="rozmiar" min="0" max="300" value="100" step="5">
+        </aside>
+    </main>
+    <footer>
+        <p><a href="styl.css" target="_blank">Otwórz plik ze stylami</a></p>
+        <p>Strone wykonał: 1234567890</p>
+    </footer>
+    <script>
+        let przycisk = document.querySelector('#przycisk')
+        let red = document.querySelector('#RED')
+        let green = document.querySelector('#GREEN')
+        let blue = document.querySelector('#BLUE')
+        let egzamin = document.querySelector('#egzamin')
+        let rozmiar = document.querySelector('#rozmiar')
+
+        przycisk.addEventListener('click',zamiana)
+        function zamiana() {
+            let tresc = document.querySelector('#tresc').value
+            egzamin.innerText=`${tresc}`
+        }
+
+        rozmiar.addEventListener('input',powiekszanie)
+        function powiekszanie() {
+            let wartosc = rozmiar.value
+            egzamin.style.fontSize=`${wartosc}` + 'px'
+        }
+
+        red.addEventListener('input',kolorowanie1)
+        function kolorowanie1() {
+            let czerwony = red.value
+            let zielony = green.value
+            let niebieski = blue.value
+            egzamin.style.color=`rgb(${czerwony},${zielony},${niebieski})`
+        }
+
+        green.addEventListener('input', kolorowanie2)
+            function kolorowanie2() {
+                let czerwony = red.value
+                let zielony = green.value
+                let niebieski = blue.value
+                egzamin.style.color = `rgb(${czerwony},${zielony},${niebieski})`
+            }
+
+        blue.addEventListener('input', kolorowanie3)
+            function kolorowanie3() {
+                let czerwony = red.value
+                let zielony = green.value
+                let niebieski = blue.value
+                egzamin.style.color = `rgb(${czerwony},${zielony},${niebieski})`
+            }
+    </script>
+</body>
+</html>
